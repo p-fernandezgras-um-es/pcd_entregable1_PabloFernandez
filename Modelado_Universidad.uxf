@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>256</y>
+      <w>88</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>/Persona/
+bg=orange
+-
+nombre:str
+DNI:str
+direccion:str
+sexo:sexo
+-
+info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>112</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Sexo
+bg=orange
+-
+	MASCULINO
+	FEMENINO
+	OTRO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>440</y>
+      <w>192</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Estudiante
+bg=orange
+-
+asignaturas:list(Asignaturas)
+-
+info()
+matricularse(asignatura:Asignaturas)
+aprobar(asignatura)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>352</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>872</x>
+      <y>272</y>
+      <w>280</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>/Miembro_departamento/
+bg=orange
+-
+departamento:Departamentos
+-
+info()
+cambiar_departamento(departamento:Departamentos)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>96</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Departamentos
+bg=orange
+-
+DIS
+DITEC
+DIIC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>296</y>
+      <w>136</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>944</x>
+      <y>336</y>
+      <w>24</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>440</y>
+      <w>224</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/Profesor/
+bg=orange
+-
+asignaturas:list(Asignaturas)
+-
+añadir_asignatura(asignatura:Asignaturas)
+quitar_asignatura(asignatura:Asignaturas)
+info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>552</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Profesor_asociado
+bg=orange
+-
+info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>944</x>
+      <y>512</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1192</x>
+      <y>448</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Profesor_titular
+bg=orange
+-
+info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1096</x>
+      <y>464</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1200</x>
+      <y>272</y>
+      <w>264</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Investigador
+bg=orange
+-
+area_investigacion:str
+-
+info()
+cambiar_area_investigacion(area_investigacion:str)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1144</x>
+      <y>296</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1264</x>
+      <y>336</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>664</y>
+      <w>752</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>Universidad
+bg=orange
+-
+miembro_departamento:list(Miembros_departamento)
+estudiantes:list(Estudiante)
+-
+añadir_estudiante(nombre:str,DNI:str,dirección:str,sexo:Sexo,grado:Grados,asignaturas:list(Asignaturas))
+añadir_profesor_titular(nombre:str,DNI:str,dirección:str,sexo:Sexo,departamento:Departamentos,area_investigacion:str,asignaturas:list(Asignaturas))
+añadir_profesor_asociado(nombre:str,DNI:str,dirección:str,sexo:Sexo,departamento:Departamentos,asignaturas:list(Asignaturas))
+añadir_investigador(nombre:str,DNI:str,dirección:str,sexo:Sexo,departamento:Departamentos,area_investigacion:str)
+eliminar_estudiante(DNI:str)
+eliminar_miembro_departamento(DNI:str)
+estudiantes()
+profesores()
+profesores_titulares()
+profesores_asociados()
+investigadores()
+departamentoDIIC()
+departamentoDIS()
+departamentoDITEC()
+mostrar_profesores()
+mostrar_miembros_departamento()
+mostrar_estudiantes()
+mostrar_investigadores()
+cambiar_departamento(DNI,departamento:Departamentos)
+cambiar_area_investigacion(DNI,area_investigacion:str)
+matricular(DNI,asignatura:Asignaturas)
+aprobar_asignatura(DNI,asignatura:Asignaturas)
+añadir_asignaturaProf(DNI,asignatura:Asignaturas)
+quitar_asignaturaProf(DNI,asignatura:Asignaturas)
+info_estudiante(DNI)
+info_miembro_departamento(DNI)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>336</y>
+      <w>48</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>464</y>
+      <w>144</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>184</y>
+      <w>32</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>152</y>
+      <w>144</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Grados
+bg=orange
+-
+ADE
+DERECHO
+PSICOLOGIA
+INGENIERIA_INDUSTRIAL
+MEDICINA
+EDUCACION_PRIMARIA
+ARQUITECTURA
+BIOLOGIA
+CAFD
+ENFERMERIA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>280</y>
+      <w>216</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0;210.0;220.0;250.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>312</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+bg=black
+m1=1..n
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>368</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Asignaturas
+bg=orange
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>440</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Asignaturas
+bg=orange
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>400</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Asignaturas
+bg=orange
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>416</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Asignaturas
+bg=orange
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>472</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Asignaturas
+bg=orange
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>944</x>
+      <y>168</y>
+      <w>32</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
