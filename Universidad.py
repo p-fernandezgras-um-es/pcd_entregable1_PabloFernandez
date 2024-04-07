@@ -701,6 +701,39 @@ class Universidad:
                     break
         if not encontrado:
             raise DNINoEncontrado(f"No se ha encontrado ningún miembro de departamento con DNI: {DNI}")
+        
+    #Devuelve las asignaturas matriculadas de un estudiante de la universidad.
+    def asignaturas_estudiantes(self,DNI):
+        encontrado=False
+        for estudiante in self.estudiantes():
+            if estudiante.DNI==DNI:
+                    encontrado=True
+                    return estudiante.asignaturas
+                    break
+        if not encontrado:
+            raise DNINoEncontrado(f"No se ha encontrado ningún estudiante con DNI: {DNI}")
+        
+    #Devuelve el departamento de un miembro de departamento de la universidad.
+    def departamento_md(self,DNI):
+        encontrado=False
+        for md in self.miembros_departamento:
+            if md.DNI==DNI:
+                    encontrado=True
+                    return md.departamento
+                    break
+        if not encontrado:
+            raise DNINoEncontrado(f"No se ha encontrado ningún miembro de departamento con DNI: {DNI}")
+    
+    #Devuelve el area de investigacion un miembro de departamento de la universidad.
+    def area_investigacion_md(self,DNI):
+        encontrado=False
+        for md in self.miembros_departamento:
+            if md.DNI==DNI:
+                    encontrado=True
+                    return md.area_investigacion
+                    break
+        if not encontrado:
+            raise DNINoEncontrado(f"No se ha encontrado ningún miembro de departamento con DNI: {DNI}")
 
 
 
@@ -873,18 +906,33 @@ umu=Universidad(miembros_departamento,estudiantes)
 if __name__ == "__main__":
     
     umu.mostrar_estudiantes()
+
     umu.info_estudiante("45678901G")
+
     umu.aprobar_asignatura("45678901G",Asignaturas_Medicina.ANATOMIA_HUMANA)
+
     umu.info_estudiante("45678901G")
+
     umu.mostrar_investigadores()
+
     umu.cambiar_area_investigacion("87654321B","Humanidades")
+
     umu.info_miembro_departamento("87654321B")
+
     umu.mostrar_miembros_departamento()
+
     umu.info_miembro_departamento("23456789K")
+
     umu.añadir_asignaturaProf("23456789K",Asignaturas_Medicina.GINECOLOGIA_OBSTETRICIA)
+
     umu.info_miembro_departamento("23456789K")
+
     umu.quitar_asignaturaProf("23456789K",Asignaturas_Medicina.GINECOLOGIA_OBSTETRICIA)
+
     umu.info_miembro_departamento("23456789K")
+
     umu.mostrar_profesores()
+
     umu.eliminar_miembro_departamento("87654321B")
+    
     umu.mostrar_profesores()
